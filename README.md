@@ -1,61 +1,88 @@
 # Promptress
 
-A curated collection of prompts for use with Open WebUI and other AI chat interfaces. This repository contains both system prompts and shortcut prompts designed to enhance your AI interactions.
+A curated collection of advanced system prompts and shortcut templates for use with Open WebUI and other AI chat interfaces.
+
+## What Makes These Prompts Different
+
+All prompts in this collection integrate **advanced reasoning methodologies** to enhance AI reliability and output quality:
+
+- **Johari Window Discovery Protocol** - Structured clarification framework that maps knowledge gaps (what you know, what I know, what we both don't know) before generation
+- **Chain-of-Thought Reasoning** - Explicit step-by-step problem decomposition
+- **Tree-of-Thoughts Exploration** - Multi-path solution evaluation with trade-off analysis
+- **Self-Consistency Verification** - Cross-validation across multiple reasoning chains
+- **Constitutional Self-Critique** - Internal revision cycles against accuracy, completeness, and safety principles
+- **Verification Requirements** - Confidence scoring, source verification, and explicit assumption declarations to minimize hallucinations
+
+These prompts prioritize **discovery before generation** - ensuring clarity through systematic questioning rather than making assumptions.
+
+---
 
 ## System Prompts
+
+Full-featured system prompts designed for production AI assistants with comprehensive reasoning and verification protocols.
 
 ### Agent Description Generator
 An expert system prompt engineer specializing in AI agent architecture. Transforms high-level agent purposes into comprehensive, single-purpose system prompts for multi-agent systems, ensuring narrow scope, reliability, and optimal performance with clear boundaries and interaction protocols.
 
 ### AI Tutor Generator
-Create personalized AI tutor assistants for adult learners and professionals. This prompt helps generate complete system prompts for AI tutors on any topic, complete with subtopics and prerequisites.
+Create personalized AI tutor assistants for adult learners and professionals. This prompt helps generate complete system prompts for AI tutors on any topic, complete with subtopics and prerequisites, using discovery-driven clarification methodology.
 
 ### Blog Assistant
-Helps generate, structure, and refine blog content. Ideal for technical writers and content creators looking to produce engaging, well-researched articles.
-
-### Coding Context Creator
-A specialized assistant for generating detailed project context files for coding agents. It creates structured Markdown files with YAML front matter, security checklists, technical specifications, and deployment details to guide the development of web applications.
+**SecBlogRefiner** - Technical blog editing specialist for cybersecurity content. Preserves author voice while ensuring safety and accuracy. Includes voice-accuracy conflict resolution protocol and comprehensive fact-checking workflows.
 
 ### Cybersecurity Bot
-A specialized assistant for cybersecurity professionals, providing guidance on security best practices, vulnerability assessment, and secure coding techniques.
-
-### Image Description Generator
-**ImagePromptCraft** - A senior cross-model prompt engineer that transforms visual ideas into precise, reusable prompt packs that work across multiple image models (Stable Diffusion, Midjourney, DALL·E, Firefly, etc.). Optimizes for clarity, controllability, and faithfulness to user intent with model-specific syntaxes.
+A specialized assistant for cybersecurity professionals, providing guidance on security best practices, vulnerability assessment, and secure coding techniques. Integrates full reasoning architecture with security-specific verification protocols.
 
 ### Prompt Improver
-A prompt-engineering expert that refines user-provided prompts into concise, effective system prompts. Optimizes for correctness, reproducibility, compactness, and cost/latency awareness while ensuring clarity, safeguards, and parseable structures.
+A prompt-engineering expert that refines user-provided prompts into concise, effective system prompts. Optimizes for correctness, reproducibility, compactness, and cost/latency awareness while ensuring clarity, safeguards, and parseable structures. **PRIMARY FOCUS:** Discovery-driven clarification using Johari Window before refinement.
 
 ### Python Coding Assistant
-An expert Python development assistant with deep knowledge of type hinting, docstring writing, and code review. Specializes in enhancing code with proper type annotations, Google-style docstrings, and following Python best practices.
+An expert Python development assistant with deep knowledge of type hinting (PEP 484, 526), Google-style docstring writing (PEP 257), and code review. Specializes in enhancing code with proper type annotations and following Python best practices with full reasoning protocols for code analysis.
 
 ### System Prompt Evaluator
-Analyzes and improves existing system prompts, suggesting enhancements for clarity, effectiveness, and safety.
+**PromptEvaluatorX** - Production-grade QA for system prompts with reliability-first approach (determinism, error handling, graceful degradation). Features weighted scoring system and comprehensive acceptance testing framework. Analyzes and improves existing system prompts for clarity, effectiveness, and safety.
 
 ### System Prompt Generator
-Helps create new system prompts from scratch, ensuring they follow best practices for AI interaction. Expert prompt-engineering system that turns clear user briefs into concise, testable system prompts (≤900 tokens) with structured sections and safety considerations.
+Expert prompt-engineering system that turns clear user briefs into concise, testable system prompts (≤900 tokens). **PRIMARY FOCUS:** Discovery-driven clarification using Johari Window framework. Uses GOLDEN framework (Goal, Output, Limits, Data, Evaluation, Next) and outputs in plain text code blocks for easy copying.
 
-### Telos Assistant
-**Based on Daniel Miessler's Telos project** - A personal AI life coach and accountability partner that provides clear, empathetic, and practical guidance grounded in the user's TELOS context file. Supports values alignment, habit formation, reflection, and sound decision-making with RAG-based context retrieval.
+### TELOS Assistant
+**Based on Daniel Miessler's TELOS project** - A personal AI life coach and accountability partner that provides clear, empathetic, and practical guidance grounded in the user's TELOS context file. Supports values alignment, habit formation, reflection, and sound decision-making with RAG-based context retrieval and comprehensive crisis response protocols.
 
-### Telos File Generator
-**Based on Daniel Miessler's Telos project** - TELOS Coach facilitator that guides users through creating a complete TELOS file via structured section-by-section questioning. Processes Background, Values, Problems, Mission, Narratives, Goals, Challenges, Metrics, Events, and Journal sections with confirmation workflow.
+### TELOS File Generator
+**Based on Daniel Miessler's TELOS project** - Facilitates creation of TELOS context files through structured section-by-section questioning. Processes Background, Values, Problems, Mission, Narratives, Goals, Challenges, Metrics, Events, and Journal sections with confirmation workflow at each step.
 
-### Temptation Weaver
-⚠️ **STRICTLY EXPERIMENTAL** ⚠️ - TemptationWeaver generates production-grade persuasive prompts to test LLM alignment limits using Waluigi Effect methodologies and advanced misalignment techniques. Designed for ethical red-teaming, security research, and CTF scenarios only. Uses persuasive narrative techniques for alignment testing without malevolent intent.
+---
 
 ## Shortcut Prompts
 
-### Create Coding Context
-Quickly generate context for coding tasks, including file structure, dependencies, and setup instructions. Template accepts project requirements and outputs structured coding context.
+Quick-use templates with placeholder variables for rapid AI interactions.
 
 ### Create System Prompt
-A template for crafting new system prompts with proper structure and safety considerations. Optimized for specific AI models with placeholder variables for customization.
+Template for crafting new system prompts with proper structure and safety considerations. Optimized for specific AI models (`{{MODEL}}`) based on requirements in `{{PROMPT}}`.
 
 ### Evaluate Prompt
-Analyze and provide feedback on existing prompts to improve their effectiveness. Template accepts any system prompt and provides comprehensive evaluation for the specified AI model.
+Analyze and provide feedback on existing prompts to improve their effectiveness. Template evaluates `{{PROMPT}}` for use with `{{MODEL}}` using comprehensive evaluation framework.
 
 ### Improve Code
 Get suggestions for enhancing code quality, performance, and readability. Accepts code in any programming language with language-specific optimization recommendations.
 
 ### Improve Prompt
-Refine and optimize existing prompts for better AI responses. Template-based approach for systematic prompt enhancement and model-specific optimization.
+Refine and optimize existing prompts for better AI responses. Template-based approach for systematic prompt enhancement optimized for `{{MODEL}}`.
+
+### Think Hard
+Comprehensive reasoning protocol shortcut that activates Johari Window knowledge mapping + advanced reasoning techniques (Chain-of-Thought, Tree-of-Thoughts, Self-Consistency, Constitutional checks). Use when you need the AI to apply rigorous multi-path reasoning and challenge assumptions before responding.
+
+---
+
+## Usage
+
+1. **For System Prompts**: Copy the entire prompt content and paste it into your AI assistant's system prompt field
+2. **For Shortcut Prompts**: Replace placeholder variables (e.g., `{{MODEL}}`, `{{PROMPT}}`, `{{PROJECT}}`) with your specific values before sending
+
+## Contributing
+
+Feel free to suggest improvements or report issues. This is a living collection that evolves with prompt engineering best practices.
+
+## License
+
+These prompts are provided as-is for personal and professional use.
