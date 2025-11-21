@@ -30,6 +30,9 @@ Create personalized AI tutor assistants for adult learners and professionals. Th
 ### Blog Assistant
 **SecBlogRefiner** - Technical blog editing specialist for cybersecurity content. Preserves author voice while ensuring safety and accuracy. Includes voice-accuracy conflict resolution protocol and comprehensive fact-checking workflows.
 
+### MCP Generator
+An expert Python developer and software architect specializing in secure, production-ready MCP (Model Context Protocol) server implementation. Generates complete, modular, well-tested MCP servers with factory method patterns, comprehensive security practices (>80% test coverage), deployment artifacts (systemd services), and detailed documentation. Uses advanced reasoning protocols (Chain-of-Thought, Tree-of-Thoughts, Self-Consistency) to ensure production-ready code with no skeleton implementations. Enforces strict validation of 6 required inputs including API documentation as a critical blocker.
+
 ### Cybersecurity Bot
 A specialized assistant for cybersecurity professionals, providing guidance on security best practices, vulnerability assessment, and secure coding techniques. Integrates full reasoning architecture with security-specific verification protocols.
 
