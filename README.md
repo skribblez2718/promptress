@@ -1,6 +1,6 @@
 # Promptress
 
-A curated collection of advanced system prompts and shortcut templates for use with Open WebUI and other AI chat interfaces.
+A curated collection of system prompts and shortcut templates for use with Open WebUI and other AI chat interfaces.
 
 ## What Makes These Prompts Different
 
@@ -19,7 +19,7 @@ These prompts prioritize **discovery before generation** - ensuring clarity thro
 
 ## System Prompts
 
-Full-featured system prompts designed for production AI assistants with comprehensive reasoning and verification protocols.
+Full-featured system prompts designed for AI assistants with comprehensive reasoning and verification protocols.
 
 ### Agent Description Generator
 An expert system prompt engineer specializing in AI agent architecture. Transforms high-level agent purposes into comprehensive, single-purpose system prompts for multi-agent systems, ensuring narrow scope, reliability, and optimal performance with clear boundaries and interaction protocols.
@@ -37,16 +37,16 @@ An expert Python developer and software architect specializing in secure, produc
 A specialized assistant for cybersecurity professionals, providing guidance on security best practices, vulnerability assessment, and secure coding techniques. Integrates full reasoning architecture with security-specific verification protocols.
 
 ### Prompt Improver
-A prompt-engineering expert that refines user-provided prompts into concise, effective system prompts. Optimizes for correctness, reproducibility, compactness, and cost/latency awareness while ensuring clarity, safeguards, and parseable structures. **PRIMARY FOCUS:** Discovery-driven clarification using Johari Window before refinement.
+A prompt-engineering expert that refines user-provided prompts into effective system prompts. **PRIMARY FOCUS:** Discovery-driven clarification using Johari Window before refinement.
 
 ### Python Coding Assistant
 An expert Python development assistant with deep knowledge of type hinting (PEP 484, 526), Google-style docstring writing (PEP 257), and code review. Specializes in enhancing code with proper type annotations and following Python best practices with full reasoning protocols for code analysis.
 
 ### System Prompt Evaluator
-**PromptEvaluatorX** - Production-grade QA for system prompts with reliability-first approach (determinism, error handling, graceful degradation). Features weighted scoring system and comprehensive acceptance testing framework. Analyzes and improves existing system prompts for clarity, effectiveness, and safety.
+**PromptEvaluatorX** - QA for system prompts with reliability-first approach (determinism, error handling, graceful degradation). Features weighted scoring system and comprehensive acceptance testing framework. Analyzes and improves existing system prompts for clarity, effectiveness, and safety.
 
 ### System Prompt Generator
-Expert prompt-engineering system that turns clear user briefs into concise, testable system prompts (≤900 tokens). **PRIMARY FOCUS:** Discovery-driven clarification using Johari Window framework. Uses GOLDEN framework (Goal, Output, Limits, Data, Evaluation, Next) and outputs in plain text code blocks for easy copying.
+Expert prompt-engineering system that turns clear user briefs into concise, testable system prompts. **PRIMARY FOCUS:** Discovery-driven clarification using Johari Window framework. Uses GOLDEN framework (Goal, Output, Limits, Data, Evaluation, Next) and outputs in plain text code blocks for easy copying.
 
 ### TELOS Assistant
 **Based on Daniel Miessler's TELOS project** - A personal AI life coach and accountability partner that provides clear, empathetic, and practical guidance grounded in the user's TELOS context file. Supports values alignment, habit formation, reflection, and sound decision-making with RAG-based context retrieval and comprehensive crisis response protocols.
@@ -74,18 +74,3 @@ Refine and optimize existing prompts for better AI responses. Template-based app
 
 ### Think Hard
 Comprehensive reasoning protocol shortcut that activates Johari Window knowledge mapping + advanced reasoning techniques (Chain-of-Thought, Tree-of-Thoughts, Self-Consistency, Constitutional checks). Use when you need the AI to apply rigorous multi-path reasoning and challenge assumptions before responding.
-
----
-
-## Usage
-
-1. **For System Prompts**: Copy the entire prompt content and paste it into your AI assistant's system prompt field
-2. **For Shortcut Prompts**: Replace placeholder variables (e.g., `{{MODEL}}`, `{{PROMPT}}`, `{{PROJECT}}`) with your specific values before sending
-
-## Contributing
-
-Feel free to suggest improvements or report issues. This is a living collection that evolves with prompt engineering best practices.
-
-## License
-
-These prompts are provided as-is for personal and professional use.
