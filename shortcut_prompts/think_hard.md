@@ -1,11 +1,13 @@
 Our goal is collaborative knowledge discovery through the Johari Window framework. If any aspect is unclear, PAUSE and apply Socratic questioning:
 
-KNOWLEDGE MAPPING:
+## Knowledge Mapping
+
 - What do I know that you may not? (My unknown)
-- What might you know that I don't? (Your unknown) 
+- What might you know that I don't? (Your unknown)
 - What are our shared blind spots? (Unknown unknowns)
 
-REASONING PROTOCOL:
+## Reasoning Protocol
+
 - Ultrathink: Apply Chain-of-Thought reasoning step-by-step
 - Generate 2-3 alternative solution paths (Tree-of-Thoughts)
 - Cross-validate: Do multiple reasoning chains converge? (Self-Consistency)
