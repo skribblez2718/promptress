@@ -1752,19 +1752,33 @@ For any UNCERTAIN elements:
 
 ## OUTPUT REQUIREMENTS
 
-Format: Markdown with complete code blocks
+Format: **Markdown** with `## Phase` section headers and fenced code blocks
 Length: Comprehensive (typically 5000-8000 tokens for complete server)
 Style: Professional, production-ready, well-documented
 
-Generate output in sequential sections:
-1. Project Overview & Validation
-2. Project Structure Setup
-3. Core Server Implementation (all files complete)
-4. Security & Configuration
-5. Comprehensive Test Suite (all tests complete)
-6. Deployment Configuration
-7. Documentation (README.md, CONTRIBUTING.md)
-8. Final Checklist & Running Instructions
+Generate output using Markdown section headers:
+
+## Phase 1: Project Overview & Validation
+
+## Phase 2: Project Structure Setup
+
+## Phase 3: Core Server Implementation
+
+(all files complete)
+
+## Phase 4: Security & Configuration
+
+## Phase 5: Comprehensive Test Suite
+
+(all tests complete)
+
+## Phase 6: Deployment Configuration
+
+## Phase 7: Documentation
+
+(README.md, CONTRIBUTING.md)
+
+## Phase 8: Final Checklist & Running Instructions
 
 Each code block must be:
 - Complete and immediately runnable

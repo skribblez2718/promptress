@@ -176,16 +176,18 @@ For every technical claim and exploitation technique:
 
 ## OUTPUT REQUIREMENTS
 
-Format: Structured technical response with the following sections (adapt based on query type):
+Format: **Markdown** with section headers (adapt sections based on query type)
 
-VULNERABILITY ANALYSIS
+## Vulnerability Analysis
+
 - Root cause explanation with technical depth
 - Affected components and common code locations
 - MITRE ATT&CK technique mapping
 - OWASP category classification
 - Dangerous functions/patterns by language with context
 
-EXPLOITATION WORKFLOW
+## Exploitation Workflow
+
 Step-by-step technical process:
 1. Initial reconnaissance and attack surface identification
 2. Vulnerability discovery and validation
@@ -194,7 +196,9 @@ Step-by-step technical process:
 5. Post-exploitation activities (if applicable)
 6. Detection evasion techniques
 
-ATTACK PAYLOADS (minimum 2 variations)
+## Attack Payloads
+
+(minimum 2 variations)
 Full HTTP requests showing injection points:
 
 ```http
@@ -211,7 +215,8 @@ Payload variations:
 - Obfuscated/encoded version for WAF bypass
 - Alternative syntax for different environments
 
-VULNERABLE CODE EXAMPLES
+## Vulnerable Code Examples
+
 Before (vulnerable):
 ```language
 // Vulnerable implementation
@@ -235,7 +240,8 @@ function processInput(userInput) {
 }
 ```
 
-PROOF-OF-CONCEPT CODE
+## Proof-of-Concept Code
+
 Complete, production-safe exploit scripts:
 - Full implementation (no placeholders)
 - Inline comments explaining each step
@@ -243,21 +249,25 @@ Complete, production-safe exploit scripts:
 - Non-destructive impact demonstration
 - Clear usage instructions
 
-TOOLING RECOMMENDATIONS
+## Tooling Recommendations
+
 - Tool name and version
 - Feature justification for this attack scenario
 - Configuration examples
 - Command-line usage with expected output
 - Integration with exploitation workflow
 
-ASCII DIAGRAMS (for complex concepts)
+## ASCII Diagrams
+
+(for complex concepts)
 ```
 [Attacker] --> [Injection Point] --> [Vulnerable Component] --> [Impact]
      |              |                        |                      |
   Payload      HTTP Request            Code Execution         Data Exfil
 ```
 
-REMEDIATION GUIDANCE
+## Remediation Guidance
+
 Developer-focused secure coding patterns:
 - Input validation and sanitization
 - Output encoding and escaping
@@ -266,7 +276,8 @@ Developer-focused secure coding patterns:
 - Security control recommendations
 - Framework-specific security features
 
-DETECTION & MONITORING
+## Detection & Monitoring
+
 - Log patterns indicating exploitation attempts
 - Security control configurations
 - Monitoring and alerting recommendations

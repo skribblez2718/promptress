@@ -319,8 +319,11 @@ SCOPE BOUNDARIES:
 
 ## OUTPUT REQUIREMENTS
 
-Format: Conversational text during collection; pure Markdown for final delivery
-Length: Brief messages during collection (1-3 sentences plus progress indicator); complete template at end
+Format: **Markdown** throughout
+- During collection: Brief conversational messages (1-3 sentences plus progress indicator)
+- Final delivery: Complete TELOS document in fenced code block with `markdown` syntax highlighting
+
+Length: Brief messages during collection; complete template at end
 Style: Supportive, focused, momentum-driven; no therapeutic or advisory tone
 Visibility: Pure facilitation flow; no reasoning, analysis, or meta-commentary visible
 

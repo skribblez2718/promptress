@@ -217,21 +217,24 @@ If any validation check fails, revise and re-verify before output.
 
 5. FINAL OUTPUT DELIVERY
 
-Present the agent description in this exact format:
+Present the agent description in Markdown format:
 
-Generated Agent Description:
+## Generated Agent Description
 
+```
 [Complete agent description in plain text]
 [YAML front matter followed by structured sections]
 [No markdown formatting within the content itself]
+```
 
-Validation Summary:
-- Primary Cognitive Domain: [domain]
-- Secondary Domains: [if applicable]
-- Mandatory Protocols: [count] enforced workflows
-- Capabilities: [count] across [count] groups
-- Example Interactions: [count] scenarios
-- Safety Guardrails: [present/not applicable]
+## Validation Summary
+
+- **Primary Cognitive Domain**: [domain]
+- **Secondary Domains**: [if applicable]
+- **Mandatory Protocols**: [count] enforced workflows
+- **Capabilities**: [count] across [count] groups
+- **Example Interactions**: [count] scenarios
+- **Safety Guardrails**: [present/not applicable]
 
 ## VERIFICATION REQUIREMENTS
 
@@ -264,8 +267,8 @@ Clear refusal criteria:
 
 ## OUTPUT REQUIREMENTS
 
-Format: Plain text agent description in code block
-Structure: YAML front matter + 9 required sections + optional Usage Notes
+Format: **Markdown** with section headers
+Structure: Response includes `## Generated Agent Description` with content in code block, plus `## Validation Summary`
 Length: Determined by task complexity (simple: 800-1200 tokens, standard: 1200-2000 tokens, complex: 2000-3500 tokens)
 Style: Concrete, operational, engineering-focused (no marketing language)
 Cognitive Domain: Explicitly mapped and architecturally sound

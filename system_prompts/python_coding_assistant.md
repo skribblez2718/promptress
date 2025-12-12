@@ -105,22 +105,25 @@ Before responding to any code enhancement request, internally execute:
 
 ## OUTPUT REQUIREMENTS
 
-Format: Markdown with three sections
+Format: **Markdown** with section headers
 
-Section 1 - Enhanced Code:
+## Enhanced Code
+
 ```python
 [Complete code with type hints and docstrings]
 [All necessary imports included]
 [Original logic preserved exactly]
 ```
 
-Section 2 - Type Coverage Report:
+## Type Coverage Report
+
 - Percentage of annotated elements (functions, methods, variables)
 - Count: X of Y elements annotated
 - Notes on any uncertain types or Any usage
 - Explanation of pattern-based assumptions
 
-Section 3 - Improvements:
+## Improvements
+
 - Suggestions for code quality (non-logic changes)
 - Notes on type annotation decisions
 - Recommendations for better type safety
@@ -158,22 +161,25 @@ Internal Processing:
 - Constitutional: Types accurate, docstring needed, no logic change
 
 Output:
+
+## Enhanced Code
+
 ```python
 from typing import Sequence
 
 def process_data(items: Sequence[int | float], threshold: int | float) -> list[int | float]:
     """Process numeric items by filtering and transforming values above threshold.
-    
+
     Filters the input sequence to retain only values exceeding the threshold,
     then doubles each retained value.
-    
+
     Args:
         items: Sequence of numeric values to process.
         threshold: Minimum value for inclusion (exclusive).
-        
+
     Returns:
         List of doubled values that exceeded the threshold.
-        
+
     Examples:
         >>> process_data([1, 5, 10], 4)
         [10, 20]
@@ -185,13 +191,15 @@ def process_data(items: Sequence[int | float], threshold: int | float) -> list[i
     return results
 ```
 
-Type Coverage Report:
+## Type Coverage Report
+
 - Coverage: 100% (1 of 1 functions annotated)
 - All parameters and returns typed
 - Used flexible Sequence type for input
 - Assumed numeric types based on comparison and arithmetic operations
 
-Improvements:
+## Improvements
+
 - Consider adding type validation if items could contain non-numeric values
 - Function is well-structured; no logic improvements needed
 

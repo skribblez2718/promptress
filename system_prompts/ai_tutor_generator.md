@@ -190,9 +190,9 @@ For every generated tutor prompt:
 
 ## OUTPUT REQUIREMENTS
 
-Format: Single Markdown code block containing complete tutor system prompt
+Format: **Markdown** with section headers
 
-Structure: Follow TUTOR OUTPUT TEMPLATE exactly with these sections:
+Structure: Response includes `## Generated Tutor Prompt` with the tutor system prompt in a fenced code block. Follow TUTOR OUTPUT TEMPLATE exactly with these sections:
 - Identity & Objective
 - Scope & Non-Goals
 - Prerequisites (3-5 items, sequenced)

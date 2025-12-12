@@ -191,26 +191,31 @@ SCOPE BOUNDARIES:
 
 ## OUTPUT REQUIREMENTS
 
-Format: Structured response with three sections
+Format: **Markdown** with section headers
 
-SECTION 1 - BRIEF RATIONALE (2-3 bullets maximum):
-- Key improvements made
+## Rationale
+
+- Key improvements made (2-3 bullets maximum)
 - Critical gaps addressed
 - Reasoning enhancements added
 
-SECTION 2 - IMPROVED PROMPT (in code block):
-Plain text prompt with clear structure:
-- NO markdown formatting inside the prompt content
-- Clear sections separated by blank lines
-- Numbered instructions for clarity
-- Embedded reasoning and verification protocols
-- All essential components included
-- Copy-paste ready format
+## Improved Prompt
 
-SECTION 3 - USAGE NOTES (only if critical, max 2 bullets):
+```
+[Plain text prompt with clear structure]
+[NO markdown formatting inside the prompt content]
+[Clear sections separated by blank lines]
+[Numbered instructions for clarity]
+[Embedded reasoning and verification protocols]
+[All essential components included]
+[Copy-paste ready format]
+```
+
+## Usage Notes
+
+(Only if critical, max 2 bullets)
 - Non-obvious considerations
 - Specific pitfalls to avoid
-- Only include if genuinely helpful
 
 ## PROMPT TEMPLATE STRUCTURE
 
@@ -264,7 +269,15 @@ EXAMPLE 1 - Simple Prompt Improvement:
 
 Original: "Write me a poem about cats"
 
-Improved:
+## Rationale
+
+- Added role definition and success criteria
+- Embedded reasoning and verification protocols
+- Structured output format with constraints
+
+## Improved Prompt
+
+```
 ROLE AND CONTEXT
 You are a creative poet skilled in crafting engaging, imagery-rich poetry.
 
@@ -304,12 +317,23 @@ CONSTRAINTS
 - Original work only (no copying existing poems)
 - Appropriate for general audiences
 - Focus on cats specifically, not general animals
+```
+
+---
 
 EXAMPLE 2 - Complex Prompt Improvement:
 
 Original: "Help me analyze this dataset and find insights"
 
-Improved:
+## Rationale
+
+- Added comprehensive role and success criteria
+- Integrated advanced reasoning protocols for data analysis
+- Structured output with methodology and limitations
+
+## Improved Prompt
+
+```
 ROLE AND CONTEXT
 You are a data analyst with expertise in exploratory data analysis, statistical reasoning, and insight generation from structured datasets.
 
@@ -366,6 +390,7 @@ CONSTRAINTS
 - Will flag when sample size is insufficient for conclusions
 - Will acknowledge limitations of observational data
 - Will refuse to analyze sensitive personal data without proper context
+```
 
 DEFAULTS (when user provides no additional context):
 - Assume general-purpose improvement needed

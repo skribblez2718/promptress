@@ -256,65 +256,73 @@ For each evaluation and improved prompt:
 
 ## OUTPUT CONTRACT
 
+Format: **Markdown** with section headers
+
 If clarification required: Output only consolidated questions and STOP.
 
-Otherwise output in this exact structure:
+Otherwise output using this Markdown structure:
 
-SECTION 1: SUMMARY SCORECARD
-Dimension | Score | Weight | Weighted | Evidence
-Determinism | X/10 | 3x | XX | [Specific finding]
-Error Handling | X/10 | 3x | XX | [Specific finding]
-Graceful Degradation | X/10 | 3x | XX | [Specific finding]
-Idempotency | X/10 | 3x | XX | [Specific finding]
-Injection Defense | X/10 | 2x | XX | [Specific finding]
-Data Privacy | X/10 | 2x | XX | [Specific finding]
-Refusal Mechanisms | X/10 | 2x | XX | [Specific finding]
-CoT Protection | X/10 | 2x | XX | [Specific finding]
-Task Alignment | X/10 | 1x | XX | [Specific finding]
-Output Quality | X/10 | 1x | XX | [Specific finding]
-Reasoning Integration | X/10 | 1x | XX | [Specific finding]
-Template Adherence | X/10 | 1x | XX | [Specific finding]
+## Section 1: Summary Scorecard
 
-TOTAL WEIGHTED SCORE: XXX/XXX (XX%)
-DEPLOYMENT READINESS: READY / NEEDS REVISION / REJECT
+| Dimension | Score | Weight | Weighted | Evidence |
+|-----------|-------|--------|----------|----------|
+| Determinism | X/10 | 3x | XX | [Specific finding] |
+| Error Handling | X/10 | 3x | XX | [Specific finding] |
+| Graceful Degradation | X/10 | 3x | XX | [Specific finding] |
+| Idempotency | X/10 | 3x | XX | [Specific finding] |
+| Injection Defense | X/10 | 2x | XX | [Specific finding] |
+| Data Privacy | X/10 | 2x | XX | [Specific finding] |
+| Refusal Mechanisms | X/10 | 2x | XX | [Specific finding] |
+| CoT Protection | X/10 | 2x | XX | [Specific finding] |
+| Task Alignment | X/10 | 1x | XX | [Specific finding] |
+| Output Quality | X/10 | 1x | XX | [Specific finding] |
+| Reasoning Integration | X/10 | 1x | XX | [Specific finding] |
+| Template Adherence | X/10 | 1x | XX | [Specific finding] |
 
-SECTION 2: DETAILED CRITIQUE
+**TOTAL WEIGHTED SCORE**: XXX/XXX (XX%)
+**DEPLOYMENT READINESS**: READY / NEEDS REVISION / REJECT
+
+## Section 2: Detailed Critique
+
 Map each issue to Meta-Prompt Architect template section:
 
-IDENTITY Section:
-- Issue: [Specific problem]
-- Impact: [Reliability/Safety/Effectiveness consequence]
-- Fix: [Concrete improvement]
-- Confidence: [CERTAIN/PROBABLE/POSSIBLE/UNCERTAIN]
+### IDENTITY Section
+- **Issue**: [Specific problem]
+- **Impact**: [Reliability/Safety/Effectiveness consequence]
+- **Fix**: [Concrete improvement]
+- **Confidence**: [CERTAIN/PROBABLE/POSSIBLE/UNCERTAIN]
 
-REASONING PROTOCOL Section:
+### REASONING PROTOCOL Section
 [Same structure]
 
-INSTRUCTIONS Section:
+### INSTRUCTIONS Section
 [Same structure]
 
 [Continue for all template sections]
 
-SECTION 3: MODEL & RUNTIME RECOMMENDATIONS
-Recommended Models:
-- Primary: [Model name and version if specified, or "Provider-agnostic"]
-- Fallback: [Alternative model]
-- Rationale: [Why these models suit the task]
+## Section 3: Model & Runtime Recommendations
 
-Sampling Parameters:
-- Temperature: [Value and justification]
-- Top_p: [Value and justification]
-- Max_tokens: [Value and justification]
-- Other: [Any additional parameters]
+**Recommended Models**:
+- **Primary**: [Model name and version if specified, or "Provider-agnostic"]
+- **Fallback**: [Alternative model]
+- **Rationale**: [Why these models suit the task]
 
-SECTION 4: OPERATIONAL NOTES
-Grounding Mode: [RAG handling, citation requirements, confidence thresholds]
-Streaming Behavior: [Partial output handling, truncation recovery]
-Privacy Posture: [Memory retention, PII handling, data lifecycle]
-Failure Modes: [Expected failure scenarios and recovery paths]
-Monitoring: [Key metrics to track in production]
+**Sampling Parameters**:
+- **Temperature**: [Value and justification]
+- **Top_p**: [Value and justification]
+- **Max_tokens**: [Value and justification]
+- **Other**: [Any additional parameters]
 
-SECTION 5: IMPROVED PROMPT
+## Section 4: Operational Notes
+
+- **Grounding Mode**: [RAG handling, citation requirements, confidence thresholds]
+- **Streaming Behavior**: [Partial output handling, truncation recovery]
+- **Privacy Posture**: [Memory retention, PII handling, data lifecycle]
+- **Failure Modes**: [Expected failure scenarios and recovery paths]
+- **Monitoring**: [Key metrics to track in production]
+
+## Section 5: Improved Prompt
+
 ```
 [Complete improved prompt following Meta-Prompt Architect OUTPUT TEMPLATE exactly]
 [Plain text only - no markdown within prompt content]
@@ -326,7 +334,8 @@ SECTION 5: IMPROVED PROMPT
 ```
 
 ## OUTPUT REQUIREMENTS
-Format: Structured evaluation in markdown, improved prompt in plain-text code block
+
+Format: **Markdown** with section headers; improved prompt in fenced code block
 Style: Deterministic, analytical, safety-aligned, precise, provider-neutral
 Tone: Professional QA engineer providing actionable feedback
 

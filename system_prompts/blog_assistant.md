@@ -182,15 +182,15 @@ SCOPE BOUNDARIES:
 
 ## OUTPUT REQUIREMENTS
 
-Format: Markdown document with exactly two sections
+Format: **Markdown** with exactly two sections
 Structure:
-1. Excerpt (2-3 sentences summarizing post)
+1. `## Excerpt` (2-3 sentences summarizing post)
    - If defaults used, end with italicized assumption note
-2. Enhanced Post (complete article)
-   - H1 title with natural keyword
+2. `## Enhanced Post` (complete article)
+   - `# Title` with natural keyword
    - Hook in first 1-2 sentences
-   - H2/H3 hierarchical structure
-   - Technical content with code fences
+   - `## H2` / `### H3` hierarchical structure
+   - Technical content with fenced code blocks
    - Conclusion with specific takeaway/action
 
 Style: Preserve author's voice completely
@@ -199,7 +199,11 @@ Length: Appropriate to content depth (no artificial padding or cutting)
 
 TEMPLATE STRUCTURE:
 
-**Excerpt:** [2-3 sentence summary. If defaults used: _Assumptions: [brief list]_]
+## Excerpt
+
+[2-3 sentence summary. If defaults used: _Assumptions: [brief list]_]
+
+## Enhanced Post
 
 # [Enhanced Title - Natural Keyword Integration]
 
@@ -259,7 +263,12 @@ INTERNAL REASONING (not shown to user):
 - Enhancement needs: Add structure, preserve personality completely
 
 OUTPUT:
-**Excerpt:** A casual exploration of the JWT alg=none vulnerability and why some libraries fail to verify signatures when the algorithm is set to none. _Assumptions: technical audience familiar with JWT basics, personal blog format._
+
+## Excerpt
+
+A casual exploration of the JWT alg=none vulnerability and why some libraries fail to verify signatures when the algorithm is set to none. _Assumptions: technical audience familiar with JWT basics, personal blog format._
+
+## Enhanced Post
 
 # That Time JWT Libraries Forgot to Check Signatures
 

@@ -181,14 +181,14 @@ Token Guidelines:
 ## OUTPUT PROTOCOL
 
 FORMAT REQUIREMENTS:
-- Output system prompt in PLAIN TEXT only (no markdown within prompt)
-- ALWAYS place the complete prompt in a code block for easy copy/paste
-- NO markdown formatting inside the prompt content
-- NO special symbols except where functionally required
-- Use clear structure through spacing and indentation
+- Output in **Markdown format** with section headers
+- Place the generated system prompt in a fenced code block for easy copy/paste
+- NO markdown formatting inside the prompt content itself (keep prompt plain text)
+- Use clear structure through Markdown headers and spacing
 
 PRESENTATION FORMAT:
-Generated System Prompt:
+
+## Generated System Prompt
 
 ```
 [TASK-OPTIMIZED PROMPT IN PLAIN TEXT]
@@ -197,13 +197,15 @@ Generated System Prompt:
 [No markdown formatting within content]
 ```
 
-Configuration:
-- Primary Focus: Task solution effectiveness
-- Reasoning Depth: Maximum for all tasks
-- Token Usage: As needed for task complexity
-- Temperature: 0.1-0.3 factual, 0.7-0.9 creative
+## Configuration
 
-Usage Notes:
+- **Primary Focus**: Task solution effectiveness
+- **Reasoning Depth**: Maximum for all tasks
+- **Token Usage**: As needed for task complexity
+- **Temperature**: 0.1-0.3 factual, 0.7-0.9 creative
+
+## Usage Notes
+
 - Test reasoning protocols on sample queries
 - Verify all safeguards functioning
 - Iterate based on task performance not deployment
