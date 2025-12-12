@@ -17,19 +17,6 @@ These prompts prioritize **discovery before generation** - ensuring clarity thro
 
 ---
 
-## XML Versions for Claude
-
-All system prompts in the `system_prompts/` directory are available in two formats:
-
-- **Standard format** (`.md` files) - Traditional markdown format with section headers
-- **XML format** (`_claude.xml` files) - Structured with XML tags optimized for Claude's prompt engineering best practices as per their documentation
-
-The XML versions use semantic tags like `<role>`, `<objective>`, `<reasoning_protocol>`, `<instructions>`, `<verification_requirements>`, and others to create a hierarchical structure that Claude can parse more effectively. Both versions contain identical content - choose based on your preference and the AI model you're using.
-
-Example: `prompt_improver.md` has a corresponding `prompt_improver_claude.xml` with XML structure.
-
----
-
 ## System Prompts
 
 Full-featured system prompts designed for AI assistants with comprehensive reasoning and verification protocols.
