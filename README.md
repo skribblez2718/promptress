@@ -54,6 +54,27 @@ Expert prompt-engineering system that turns clear user briefs into concise, test
 ### TELOS File Generator
 **Based on Daniel Miessler's TELOS project** - Facilitates creation of TELOS context files through structured section-by-section questioning. Processes Background, Values, Problems, Mission, Narratives, Goals, Challenges, Metrics, Events, and Journal sections with confirmation workflow at each step.
 
+### Application Description Generator
+Software architecture expert specializing in application bootstrapping and project initialization. Transforms application visions into comprehensive, executable bootstrapping guides covering tech stack selection, CI/CD pipeline configuration, containerization, and deployment architecture. Uses discovery-driven clarification with Johari Window protocol before generating guides.
+
+### Office Document Generator
+**Designed for use with `office_document_tool` (Open WebUI).** A specialist in creating and modifying Microsoft Word (.docx), PowerPoint (.pptx), and Excel (.xlsx) files using a preview-then-generate workflow. Renders an HTML preview for user approval before generating the final document. Could be adapted for other uses.
+
+### PDF Document Generator
+**Designed for use with `pdf_document_tool` (Open WebUI).** A specialist in designing, previewing, and producing professional PDF documents using a clarify → HTML preview → user approval → tool call workflow. Supports custom fonts, tables, images, and configurable page layouts. Could be adapted for other uses.
+
+### Prompt Improver for Automation Flows
+**Used in [penny](https://github.com/skribblez2718/penny) and [caii](https://github.com/skribblez2718/caii) projects.** A modified version of the Prompt Improver optimized for automation workflows. Transforms prompts into effective system prompts with embedded reasoning and verification protocols. Enforces an 8,000 character limit with silent validation for integration with automated pipelines.
+
+### Recipez Recipe Generator
+**Used for AI recipe generation in [recipez](https://github.com/skribblez2718/recipez) application.** A master chef AI assistant that creates and modifies recipes with precision, producing strict JSON output suitable for automated recipe management. Never asks clarifying questions—uses reasonable culinary defaults. Can be modified for conversational use.
+
+### Resume Reviewer
+**ATS Resume Evaluator** - Expert system for analyzing resumes against job postings using Applicant Tracking System best practices. Provides weighted scoring (1-10 scale) across eight criteria, keyword gap analysis with evidence-based matching, and prioritized actionable recommendations. Maintains strict truthfulness about candidate qualifications.
+
+### Summarization for Automation Flows
+**Used in [penny](https://github.com/skribblez2718/penny) and [caii](https://github.com/skribblez2718/caii) projects.** Transforms task completion reports into concise, conversational summaries written in first person, optimized for text-to-speech playback. Outputs a single unbroken paragraph highlighting both actions and results.
+
 ---
 
 ## Shortcut Prompts
@@ -74,3 +95,15 @@ Refine and optimize existing prompts for better AI responses. Template-based app
 
 ### Think Hard
 Comprehensive reasoning protocol shortcut that activates Johari Window knowledge mapping + advanced reasoning techniques (Chain-of-Thought, Tree-of-Thoughts, Self-Consistency, Constitutional checks). Use when you need the AI to apply rigorous multi-path reasoning and challenge assumptions before responding.
+
+---
+
+## Tools
+
+Python tools for Open WebUI that extend AI assistant capabilities with document generation.
+
+### Office Document Tool
+Creates and modifies Microsoft Office documents (.docx, .pptx, .xlsx) and returns them as downloadable attachments in Open WebUI chat. Supports paragraphs, tables, images, charts, headers/footers, and find/replace operations. Use with the Office Document Generator system prompt for best results.
+
+### PDF Document Tool
+Creates and modifies PDF documents and returns them as downloadable attachments in Open WebUI chat. Supports custom page sizes, margins, fonts (including modern families like Inter, Roboto when TTF files are attached), paragraphs, tables, and images. Use with the PDF Document Generator system prompt for best results.
