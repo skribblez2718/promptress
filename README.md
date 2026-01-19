@@ -49,10 +49,10 @@ An expert Python development assistant with deep knowledge of type hinting (PEP 
 Expert prompt-engineering system that turns clear user briefs into concise, testable system prompts. **PRIMARY FOCUS:** Discovery-driven clarification using Johari Window framework. Uses GOLDEN framework (Goal, Output, Limits, Data, Evaluation, Next) and outputs in plain text code blocks for easy copying.
 
 ### TELOS Assistant
-**Based on Daniel Miessler's TELOS project** - A personal AI life coach and accountability partner that provides clear, empathetic, and practical guidance grounded in the user's TELOS context file. Supports values alignment, habit formation, reflection, and sound decision-making with RAG-based context retrieval and comprehensive crisis response protocols.
+**Based on Daniel Miessler's [Telos](https://github.com/danielmiessler/Telos) project** - A personal AI life coach and accountability partner that provides clear, empathetic, and practical guidance grounded in the user's TELOS context file. Supports values alignment, habit formation, reflection, and sound decision-making with RAG-based context retrieval and comprehensive crisis response protocols.
 
 ### TELOS File Generator
-**Based on Daniel Miessler's TELOS project** - Facilitates creation of TELOS context files through structured section-by-section questioning. Processes Background, Values, Problems, Mission, Narratives, Goals, Challenges, Metrics, Events, and Journal sections with confirmation workflow at each step.
+**Based on Daniel Miessler's [Telos](https://github.com/danielmiessler/Telos) project** - Facilitates creation of TELOS context files through structured section-by-section questioning. Processes Background, Values, Problems, Mission, Narratives, Goals, Challenges, Metrics, Events, and Journal sections with confirmation workflow at each step.
 
 ### Application Description Generator
 Software architecture expert specializing in application bootstrapping and project initialization. Transforms application visions into comprehensive, executable bootstrapping guides covering tech stack selection, CI/CD pipeline configuration, containerization, and deployment architecture. Uses discovery-driven clarification with Johari Window protocol before generating guides.
