@@ -1,109 +1,69 @@
 # Promptress
 
-A curated collection of system prompts and shortcut templates for use with Open WebUI and other AI chat interfaces.
+Promptress is a library of adaptable prompt patterns and supporting tools for conversational assistants, agentic workflows, and custom AI applications.
 
-## What Makes These Prompts Different
+The material is not designed as a turnkey integration for any particular model, vendor, or framework. Review each asset completely, decide which behavior is appropriate for your use case, and adapt it to your users, runtime capabilities, authority model, data boundaries, and output requirements.
 
-All prompts in this collection integrate **advanced reasoning methodologies** to enhance AI reliability and output quality:
+## Repository structure
 
-- **Johari Window Discovery Protocol** - Structured clarification framework that maps knowledge gaps (what you know, what I know, what we both don't know) before generation
-- **Chain-of-Thought Reasoning** - Explicit step-by-step problem decomposition
-- **Tree-of-Thoughts Exploration** - Multi-path solution evaluation with trade-off analysis
-- **Self-Consistency Verification** - Cross-validation across multiple reasoning chains
-- **Constitutional Self-Critique** - Internal revision cycles against accuracy, completeness, and safety principles
-- **Verification Requirements** - Confidence scoring, source verification, and explicit assumption declarations to minimize hallucinations
+### `prompts/`
 
-These prompts prioritize **discovery before generation** - ensuring clarity through systematic questioning rather than making assumptions.
+Contains reusable prompt assets organized by how they are intended to be used. Each subdirectory owns its current prompt map, usage notes, and any collection-specific conventions.
 
----
+#### `prompts/assistants/`
 
-## System Prompts
+Contains instruction sets for reusable conversational assistants. These are suitable starting points for configurations in chat products, agent frameworks, or custom applications where one instruction set governs an ongoing interaction.
 
-Full-featured system prompts designed for AI assistants with comprehensive reasoning and verification protocols.
+Review and adapt the intended audience, capabilities, knowledge sources, clarification behavior, authority boundaries, and output contract before deployment.
 
-### Agent Description Generator
-An expert system prompt engineer specializing in AI agent architecture. Transforms high-level agent purposes into comprehensive, single-purpose system prompts for multi-agent systems, ensuring narrow scope, reliability, and optimal performance with clear boundaries and interaction protocols.
+#### `prompts/audits/`
 
-### AI Tutor Generator
-Create personalized AI tutor assistants for adult learners and professionals. This prompt helps generate complete system prompts for AI tutors on any topic, complete with subtopics and prerequisites, using discovery-driven clarification methodology.
+Contains prompts for evidence-based review, evaluation, and improvement work. These prompts generally establish an outcome, define a review boundary, distinguish evidence from inference, preserve useful capabilities, and produce decision-ready findings.
 
-### Blog Assistant
-**SecBlogRefiner** - Technical blog editing specialist for cybersecurity content. Preserves author voice while ensuring safety and accuracy. Includes voice-accuracy conflict resolution protocol and comprehensive fact-checking workflows.
+Adapt the audited object, authoritative sources, evidence types, side-effect limits, delivery mode, and assurance requirements to the target environment.
 
-### MCP Generator
-An expert Python developer and software architect specializing in secure, production-ready MCP (Model Context Protocol) server implementation. Generates complete, modular, well-tested MCP servers with factory method patterns, comprehensive security practices (>80% test coverage), deployment artifacts (systemd services), and detailed documentation. Uses advanced reasoning protocols (Chain-of-Thought, Tree-of-Thoughts, Self-Consistency) to ensure production-ready code with no skeleton implementations. Enforces strict validation of 6 required inputs including API documentation as a critical blocker.
+#### `prompts/harnesses/`
 
-### Cybersecurity Bot
-A specialized assistant for cybersecurity professionals, providing guidance on security best practices, vulnerability assessment, and secure coding techniques. Integrates full reasoning architecture with security-specific verification protocols.
+Contains prompt methodologies and implementation briefs for capabilities embedded in an agentic harness. These assets describe portable behavior and integration requirements without providing or assuming one platform's runtime adapter.
 
-### Prompt Improver
-A prompt-engineering expert that refines user-provided prompts into effective system prompts. **PRIMARY FOCUS:** Discovery-driven clarification using Johari Window before refinement.
+An implementation should map the documented behavior to the consuming harness's native hooks, context model, tool permissions, data controls, cancellation behavior, observability, and test conventions.
 
-### Python Coding Assistant
-An expert Python development assistant with deep knowledge of type hinting (PEP 484, 526), Google-style docstring writing (PEP 257), and code review. Specializes in enhancing code with proper type annotations and following Python best practices with full reasoning protocols for code analysis.
+### `tools/`
 
-### System Prompt Evaluator
-**PromptEvaluatorX** - QA for system prompts with reliability-first approach (determinism, error handling, graceful degradation). Features weighted scoring system and comprehensive acceptance testing framework. Analyzes and improves existing system prompts for clarity, effectiveness, and safety.
+Contains reusable implementation libraries and related documentation that may support prompt-driven capabilities. Tool packages define their own dependencies, public interfaces, security boundaries, verification steps, and integration guidance.
 
-### System Prompt Generator
-Expert prompt-engineering system that turns clear user briefs into concise, testable system prompts. **PRIMARY FOCUS:** Discovery-driven clarification using Johari Window framework. Uses GOLDEN framework (Goal, Output, Limits, Data, Evaluation, Next) and outputs in plain text code blocks for easy copying.
+Treat these packages as reference implementations. Inspect and test them in the target environment, add the host's authorization and operational controls, and keep platform-specific adapters in the consuming project.
 
-### TELOS Assistant
-**Based on Daniel Miessler's [Telos](https://github.com/danielmiessler/Telos) project** - A personal AI life coach and accountability partner that provides clear, empathetic, and practical guidance grounded in the user's TELOS context file. Supports values alignment, habit formation, reflection, and sound decision-making with RAG-based context retrieval and comprehensive crisis response protocols.
+## Using prompt assets
 
-### TELOS File Generator
-**Based on Daniel Miessler's [Telos](https://github.com/danielmiessler/Telos) project** - Facilitates creation of TELOS context files through structured section-by-section questioning. Processes Background, Values, Problems, Mission, Narratives, Goals, Challenges, Metrics, Events, and Journal sections with confirmation workflow at each step.
+1. **Read the asset completely.** Understand its outcome, inputs, assumptions, boundaries, output contract, and failure behavior before changing or deploying it.
+2. **Define the target environment.** Identify the intended users, model or models, available context, tools, permissions, data classification, approval path, and machine interfaces.
+3. **Adapt deliberately.** Keep behavior that serves the desired outcome, remove irrelevant ceremony, and replace generic language with target-specific facts and interfaces. Do not preserve wording merely because it appears in the source.
+4. **Protect deterministic boundaries.** Prompt text does not grant tools, credentials, filesystem or network access, approval, or authority. Enforce privacy, safety, exact schemas, external effects, and consequential actions through the runtime wherever possible.
+5. **Evaluate behavior.** Test representative normal, ambiguous, unavailable-capability, failure, and adversarial cases. Judge outcomes, evidence, preserved constraints, and user control rather than exact wording or section presence.
+6. **Iterate from observed results.** Retain working capabilities, make reversible changes where practical, and update the adapted prompt when the target model, runtime, policy, or user need changes.
 
-### Application Description Generator
-Software architecture expert specializing in application bootstrapping and project initialization. Transforms application visions into comprehensive, executable bootstrapping guides covering tech stack selection, CI/CD pipeline configuration, containerization, and deployment architecture. Uses discovery-driven clarification with Johari Window protocol before generating guides.
+The README within each collection is the appropriate place for its current inventory and more specific usage instructions.
 
-### Office Document Generator
-**Designed for use with `office_document_tool` (Open WebUI).** A specialist in creating and modifying Microsoft Word (.docx), PowerPoint (.pptx), and Excel (.xlsx) files using a preview-then-generate workflow. Renders an HTML preview for user approval before generating the final document. Could be adapted for other uses.
+## Design principles
 
-### PDF Document Generator
-**Designed for use with `pdf_document_tool` (Open WebUI).** A specialist in designing, previewing, and producing professional PDF documents using a clarify → HTML preview → user approval → tool call workflow. Supports custom fonts, tables, images, and configurable page layouts. Could be adapted for other uses.
+Promptress assets aim to:
 
-### Prompt Improver for Automation Flows
-**Used in [penny](https://github.com/skribblez2718/penny) and [caii](https://github.com/skribblez2718/caii) projects.** A modified version of the Prompt Improver optimized for automation workflows. Transforms prompts into effective system prompts with embedded reasoning and verification protocols. Enforces an 8,000 character limit with silent validation for integration with automated pipelines.
+- define the real user-visible or operational outcome;
+- use semantic inputs rather than positional commands or one framework's invocation syntax;
+- distinguish authoritative sources, direct observations, inferences, assumptions, and unknowns when that distinction matters;
+- favor specific capability and outcome constraints over universal reasoning rituals;
+- keep clarification proportional to unresolved risk and consequence;
+- require honest capability, evidence, verification, and completion claims;
+- preserve useful behavior and exact interfaces during revision;
+- keep credentials, private data, approvals, external effects, and irreversible actions under real runtime and user control;
+- remain useful when tools or optional capabilities are unavailable; and
+- test behavior and outcomes rather than rewarding prompt length, rigid templates, phase counts, or confidence theater.
 
-### Recipez Recipe Generator
-**Used for AI recipe generation in [recipez](https://github.com/skribblez2718/recipez) application.** A master chef AI assistant that creates and modifies recipes with precision, producing strict JSON output suitable for automated recipe management. Never asks clarifying questions—uses reasonable culinary defaults. Can be modified for conversational use.
+When model-and-compute scaling is relevant, separate source claims from engineering interpretation. Favor approaches that can benefit from stronger models, search, learning, tools, feedback, data, and additional computation, while preserving deterministic safety, authority, privacy, approval, and machine-interface controls.
 
-### Resume Reviewer
-**ATS Resume Evaluator** - Expert system for analyzing resumes against job postings using Applicant Tracking System best practices. Provides weighted scoring (1-10 scale) across eight criteria, keyword gap analysis with evidence-based matching, and prioritized actionable recommendations. Maintains strict truthfulness about candidate qualifications.
+## Portability
 
-### Summarization for Automation Flows
-**Used in [penny](https://github.com/skribblez2718/penny) and [caii](https://github.com/skribblez2718/caii) projects.** Transforms task completion reports into concise, conversational summaries written in first person, optimized for text-to-speech playback. Outputs a single unbroken paragraph highlighting both actions and results.
+Generic actions such as reading, searching, writing, executing, or reviewing describe behavior that may be useful; they do not guarantee that a runtime exposes or authorizes those capabilities. An adapted prompt should use only capabilities actually available and should report an honest limitation or bounded result when a required capability is missing.
 
----
-
-## Shortcut Prompts
-
-Quick-use templates with placeholder variables for rapid AI interactions.
-
-### Create System Prompt
-Template for crafting new system prompts with proper structure and safety considerations. Optimized for specific AI models (`{{MODEL}}`) based on requirements in `{{PROMPT}}`.
-
-### Evaluate Prompt
-Analyze and provide feedback on existing prompts to improve their effectiveness. Template evaluates `{{PROMPT}}` for use with `{{MODEL}}` using comprehensive evaluation framework.
-
-### Improve Code
-Get suggestions for enhancing code quality, performance, and readability. Accepts code in any programming language with language-specific optimization recommendations.
-
-### Improve Prompt
-Refine and optimize existing prompts for better AI responses. Template-based approach for systematic prompt enhancement optimized for `{{MODEL}}`.
-
-### Think Hard
-Comprehensive reasoning protocol shortcut that activates Johari Window knowledge mapping + advanced reasoning techniques (Chain-of-Thought, Tree-of-Thoughts, Self-Consistency, Constitutional checks). Use when you need the AI to apply rigorous multi-path reasoning and challenge assumptions before responding.
-
----
-
-## Tools
-
-Python tools for Open WebUI that extend AI assistant capabilities with document generation.
-
-### Office Document Tool
-Creates and modifies Microsoft Office documents (.docx, .pptx, .xlsx) and returns them as downloadable attachments in Open WebUI chat. Supports paragraphs, tables, images, charts, headers/footers, and find/replace operations. Use with the Office Document Generator system prompt for best results.
-
-### PDF Document Tool
-Creates and modifies PDF documents and returns them as downloadable attachments in Open WebUI chat. Supports custom page sizes, margins, fonts (including modern families like Inter, Roboto when TTF files are attached), paragraphs, tables, and images. Use with the PDF Document Generator system prompt for best results.
+Named products or frameworks may appear as examples or source lineage. They are not required dependencies unless an individual asset explicitly says otherwise. Prefer the target platform's native fields, hooks, schemas, and approval mechanisms over compatibility layers that weaken its controls.

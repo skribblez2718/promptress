@@ -1,3 +1,8 @@
+# Node / TypeScript
+node_modules/
+coverage/
+*.tsbuildinfo
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
@@ -70,3 +75,5 @@ dmypy.json
 
 # Claude Code context files
 CLAUDE.md
+# Local archive of superseded prompts; never commit.
+archive/

@@ -1,0 +1,26 @@
+{
+  "name": "@promptress/youtube-transcribe",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Harness-neutral TypeScript functions for fetching and formatting available YouTube caption tracks",
+  "type": "module",
+  "main": "index.ts",
+  "exports": {
+    ".": "./index.ts"
+  },
+  "scripts": {
+    "typecheck": "tsc -p tsconfig.json",
+    "test": "vitest run",
+    "format:check": "prettier --check \"**/*.{ts,json,md}\"",
+    "test:all": "npm run typecheck && npm run test && npm run format:check"
+  },
+  "dependencies": {
+    "youtube-transcript": "1.3.1"
+  },
+  "devDependencies": {
+    "@types/node": "^25.6.0",
+    "prettier": "3.9.8",
+    "typescript": "^6.0.3",
+    "vitest": "^4.1.7"
+  }
+}
